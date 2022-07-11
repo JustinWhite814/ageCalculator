@@ -1,0 +1,32 @@
+body {
+  /* this gives the background that pretty gradient */
+    background-image:
+      linear-gradient(
+        to right, 
+        black, 
+        gray  
+      );
+  }
+  .title {
+    /* for the title  */
+      margin: 10%;
+      color: white;
+      text-align: center;
+      font-size: 300%;
+  }
+    .placement {
+      margin: 10% ;
+      font-size: 200%;
+      text-align: center;
+      color: white;
+      
+  }
+
+  .checked {
+    /* styled what the remember me looks like */
+    margin: auto;
+    font-size: 50%;
+    text-align: center;
+    color: white;
+    
+  }

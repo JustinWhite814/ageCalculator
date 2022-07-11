@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="age-calc.css" />  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <!-- <script defer src="main.js"></script>  -->
+    <style> 
+        body {
+  /* this gives the background that pretty gradient */
+    background-image:
+      linear-gradient(
+        to right, 
+        black, 
+        gray  
+      );
+  }
+  .title {
+    /* for the title  */
+      margin: 10%;
+      color: white;
+      text-align: center;
+      font-size: 300%;
+  }
+    .placement {
+      margin: 10% ;
+      font-size: 200%;
+      text-align: center;
+      color: white;
+      
+  }
+
+  .checked {
+    /* styled what the remember me looks like */
+    margin: auto;
+    font-size: 50%;
+    text-align: center;
+    color: white;
+    
+  }
+    </style>
+</head>
+<body>
+  <div class="title">
+  <h1 >J's Bar & Grill</h1>
+  </div>
+   <div class= "placement">
+    <form id="form" method="GET">
+      <!-- this class is for the background to change from one color to another -->  
+        <div class="gradient"> 
+            <p>
+                Welcome to Justin's Bar and Grill, The best place in Staten Island to get a burger and a beer.
+                Due to Mature content, drinking ages, and a big mess, we ask that you confirm your birthday to 
+                make sure you're old enough to hang!
+            </p>
+            <p>Please enter your birthday to continue</p>
+        </div>
+        <!-- Im using the input type of date which automatically formats it into Year/Month/Day -->
+        <!--  -->
+            <input type="date" name="date" id="date" required>
+            <button type='submit'>Enter here</button>  
+    </form>
+   </div> 
+        <div class="checked">
+            <label for="remember">Remember Me</label>
+            <input type="checkbox" name="remember Me" id="remember">
+        </div>
+   <script defer> 
+   
+const date = document.querySelector('#date');
+const form = document.getElementById('form');
+const checkbox = document.querySelector('#remember');
+const date2 = " "; // this empty string can be used for any date that the person who is coding decides to do. The only date must be deleted in order for it to work
+
+// small warning about the functions that I haven't figured out yet, If you arrive on the page and click the checkbox first, your date will not be saved.
+// It will only be saved if you put the date in first.
+$(function () {
+    // this function checks to see if the checkbox is clicked 
+    if (localStorage.checkbox && localStorage.checkbox != '') {
+        $('#remember').attr('checked', 'checked');
+        $('#date').val(localStorage.date);
+        
+    } else {
+        $('#remember').removeAttr('checked');
+        $('#date').val('');
+    }
+
+    $('#remember').click(function () {
+
+        if ($('#remember').is(':checked')) {
+            // this saves the date only after the box is clicked
+            localStorage.date = $('#date').val();
+            localStorage.checkbox = $('#remember').val();
+        } else {
+            localStorage.date = ''; // empties the date if the checkbox is unchecked
+            localStorage.checkbox = ''; 
+        }
+    });
+});
+form.addEventListener('submit', ()=>{
+    // this tests the value of the date against the year/month/day that you are legally able to drink in NY
+    if(date.value <= "1998-12-09" && date2)
+    {
+        alert("Welcome To the Pub!!! Please enjoy a free shot on us!!!"); //welcome message if you are old enough
+        
+    } else {
+        alert("Apologies.. Unfortunately you're not quite old enough to hang yet, don't worry though soon!!") // error message that tells you you cant get the free shot
+        
+    }
+ });
+   
+   </script>
+</body>
+</html>
