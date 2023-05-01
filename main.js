@@ -29,7 +29,7 @@ $(function () {
     });
 });
 form.addEventListener('submit', ()=>{
-    // this tests the value of the date against the year/month/day that you are legally able to drink in NY
+    // this tests the value of the date against the year/month/day that you are legally able to drink in NY, pretty cool
     if(date.value <= "1998-12-09" && date2)
     {
         alert("Welcome To the Pub!!! Please enjoy a free shot on us!!!"); //welcome message if you are old enough
