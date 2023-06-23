@@ -19,13 +19,13 @@ you are permitted access. Otherwise you cannot get in. It's an interesting proje
 
 ## Screen shots
 #### Main Page
-[Main](./images/ageCalcMain.png)
+![Main](./images/ageCalcMain.png)
 
 #### No Entry Alert
-[No-Entry](./images/NoEnterAlert.png)
+![No-Entry](./images/NoEnterAlert.png)
 
 #### Welcome Alert
-[Welcome](./images/EnterAlert.png)
+![Welcome](./images/EnterAlert.png)
 
 ## Minimun Viable Product
 * Displaying a web page that uses age verification
