@@ -18,6 +18,14 @@ you are permitted access. Otherwise you cannot get in. It's an interesting proje
 * Use your code editor to go live or run a live server
 
 ## Screen shots
+#### Main Page
+[Main](./images/ageCalcMain.png)
+
+#### No Entry Alert
+[No-Entry](./images/NoEnterAlert.png)
+
+#### Welcome Alert
+[Welcome](./images/EnterAlert.png)
 
 ## Minimun Viable Product
 * Displaying a web page that uses age verification
